@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Shortener</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+</head>
+<body>
+  <header>
+    <h1>BURL Shortener</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'shorten' %}">Shorten URL</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+    
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>Copyright © 2023 URL Shortener</p>
+  </footer>
+</body>
+</html>
